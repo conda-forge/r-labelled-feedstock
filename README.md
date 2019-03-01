@@ -11,7 +11,7 @@ Package license: GPL-3
 
 Feedstock license: BSD 3-Clause
 
-Summary: Work with labelled data imported from 'SPSS' or 'Stata' with 'haven' or 'foreign'.
+Summary: Work with labelled data imported from 'SPSS' or 'Stata' with 'haven' or 'foreign'. This package provides useful functions to deal with "haven_labelled" and "haven_labelled_spss" classes introduced by 'haven' package.
 
 
 
@@ -113,10 +113,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@bgruening](https://github.com/bgruening/)
-* [@cbrueffer](https://github.com/cbrueffer/)
-* [@daler](https://github.com/daler/)
-* [@dbast](https://github.com/dbast/)
-* [@jdblischak](https://github.com/jdblischak/)
-* [@johanneskoester](https://github.com/johanneskoester/)
+* [@conda-forge/r](https://github.com/conda-forge/r/)
 

@@ -1,4 +1,4 @@
-{% set version = "2.0.2" %}
+{% set version = '2.1.0' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -7,16 +7,15 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: labelled_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/labelled_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/labelled/labelled_{{ version }}.tar.gz
-  sha256: 0d292ad898bf9c53b2bd7b133469f9102756f4d6e69f827eb7d78e1c154aea3b
+  sha256: 3b64cb3ecba8d5cdebab86c957d54982de767b3b2b4cfc05bd6894dd6f5a32bc
 
 build:
-  noarch: generic
   merge_build_host: True  # [win]
   number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
@@ -27,11 +26,11 @@ requirements:
   host:
     - r-base
     - r-dplyr
-    - r-haven >=1.0.0
+    - r-haven >=2.1.0
   run:
     - r-base
     - r-dplyr
-    - r-haven >=1.0.0
+    - r-haven >=2.1.0
 
 test:
   commands:
@@ -42,14 +41,34 @@ about:
   home: https://github.com/larmarange/labelled
   license: GPL-3
   summary: Work with labelled data imported from 'SPSS' or 'Stata' with 'haven' or 'foreign'.
+    This package provides useful functions to deal with "haven_labelled" and "haven_labelled_spss"
+    classes introduced by 'haven' package.
   license_family: GPL3
   license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
+    - conda-forge/r
+
+# Package: labelled
+# Type: Package
+# Title: Manipulating Labelled Data
+# Version: 2.1.0
+# Maintainer: Joseph Larmarange <joseph@larmarange.net>
+# Authors@R: c( person("Joseph", "Larmarange", email = "joseph@larmarange.net", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-7097-700X")), person("Daniel", "Ludecke", role = "ctb"), person("Hadley", "Wickham", role = "ctb"), person("Bojanowski", "Michal", role = "ctb") )
+# Description: Work with labelled data imported from 'SPSS' or 'Stata' with 'haven' or 'foreign'. This package provides useful functions to deal with "haven_labelled" and "haven_labelled_spss" classes introduced by 'haven' package.
+# License: GPL-3
+# Encoding: UTF-8
+# Imports: haven (>= 2.1.0), dplyr, stats
+# Suggests: testthat, knitr, rmarkdown, questionr, snakecase
+# Enhances: memisc
+# LazyData: true
+# URL: https://github.com/larmarange/labelled
+# BugReports: https://github.com/larmarange/labelled/issues
+# VignetteBuilder: knitr
+# RoxygenNote: 6.1.1
+# NeedsCompilation: no
+# Packaged: 2019-02-22 18:55:46 UTC; jlarmarange
+# Author: Joseph Larmarange [aut, cre] (<https://orcid.org/0000-0001-7097-700X>), Daniel Ludecke [ctb], Hadley Wickham [ctb], Bojanowski Michal [ctb]
+# Repository: CRAN
+# Date/Publication: 2019-02-25 12:50:07 UTC

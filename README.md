@@ -5,7 +5,7 @@ Home: https://github.com/larmarange/labelled
 
 Package license: GPL-3
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Work with labelled data imported from 'SPSS' or 'Stata' with 'haven' or 'foreign'. This package provides useful functions to deal with "haven_labelled" and "haven_labelled_spss" classes introduced by 'haven' package.
 

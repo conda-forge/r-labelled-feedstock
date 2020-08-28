@@ -1,4 +1,4 @@
-{% set version = "2.5.0" %}
+{% set version = "2.6.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/labelled_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/labelled/labelled_{{ version }}.tar.gz
-  sha256: b0acc775cb2e98c5af0a9faf55bd04bf5bed6b5bc7d333e1a72c8be0d38bb343
+  sha256: c2e8877960bea6a312c2d97c3b465d74c43600b60349f6274881669f25d0dbd2
 
 build:
   merge_build_host: true  # [win]
@@ -26,11 +26,21 @@ requirements:
   host:
     - r-base
     - r-dplyr
-    - r-haven >=2.1.0
+    - r-haven >=2.3.1
+    - r-lifecycle
+    - r-pillar
+    - r-rlang
+    - r-tidyr
+    - r-vctrs
   run:
     - r-base
     - r-dplyr
-    - r-haven >=2.1.0
+    - r-haven >=2.3.1
+    - r-lifecycle
+    - r-pillar
+    - r-rlang
+    - r-tidyr
+    - r-vctrs
 
 test:
   commands:
@@ -39,10 +49,11 @@ test:
 
 about:
   home: https://github.com/larmarange/labelled
-  license: GPL-3
+  license: GPL-3.0-only
   summary: Work with labelled data imported from 'SPSS' or 'Stata' with 'haven' or 'foreign'. This package provides useful functions to deal with "haven_labelled" and "haven_labelled_spss" classes introduced by 'haven' package.
   license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:

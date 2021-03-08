@@ -25,20 +25,20 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - r-dplyr
+    - r-dplyr >=1.0.0
     - r-haven >=2.3.1
     - r-lifecycle
-    - r-pillar
     - r-rlang
+    - r-stringr
     - r-tidyr
     - r-vctrs
   run:
     - r-base
-    - r-dplyr
+    - r-dplyr >=1.0.0
     - r-haven >=2.3.1
     - r-lifecycle
-    - r-pillar
     - r-rlang
+    - r-stringr
     - r-tidyr
     - r-vctrs
 

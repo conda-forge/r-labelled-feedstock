@@ -1,11 +1,11 @@
-About r-labelled
-================
+About r-labelled-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-labelled-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/larmarange/labelled
 
 Package license: GPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-labelled-feedstock/blob/main/LICENSE.txt)
 
 Summary: Work with labelled data imported from 'SPSS' or 'Stata' with 'haven' or 'foreign'. This package provides useful functions to deal with "haven_labelled" and "haven_labelled_spss" classes introduced by 'haven' package.
 

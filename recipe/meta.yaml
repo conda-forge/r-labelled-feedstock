@@ -1,4 +1,4 @@
-{% set version = "2.14.1" %}
+{% set version = "2.15.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/labelled_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/labelled/labelled_{{ version }}.tar.gz
-  sha256: 8c53ba12c93c3a9a46514eb41c00574fd9be2a98ca716e72ace5a6e3e94eb106
+  sha256: 5b908d23ee2c0e00b414d72e564a3a7ec159229c17455e7e6878e5b4d613f73b
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
